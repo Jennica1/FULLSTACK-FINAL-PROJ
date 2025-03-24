@@ -1,11 +1,10 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
 import Navbar from '../components/Navbar'; // Import the Navbar
+import Form from '../components/Form';
 
 export default function EventPage() {
   const router = useRouter();
-  const [attendance, setAttendance] = useState(''); // Stores selected option
 
   return (
     <div>
@@ -30,67 +29,7 @@ export default function EventPage() {
           looking for a career change, this fair provides an opportunity to discover job 
           openings, gain insights, and make valuable connections.
         </p>
-
-        {/* RSVP Section */}
-        <h2 style={styles.subHead}>RSVP</h2>
-        <div style={styles.formContainer}>
-          <form style={styles.form}>
-            <div style={styles.inputGroup}>
-              <div>
-                <label>First Name</label>
-                <input style={styles.textBox} type="text" placeholder="John" required />
-              </div>
-              <div>
-                <label>Last Name</label>
-                <input style={styles.textBox} type="text" placeholder="Doe" required />
-              </div>
-            </div>
-
-            <div style={styles.fullWidth}>
-              <label>Email Address</label>
-              <input style={styles.textBox} type="email" placeholder="johndoe@example.com" required />
-            </div>
-
-            <div style={styles.fullWidth}>
-            <label>Attending?</label>
-              <div style={styles.radioGroup}>
-                <label>
-                  <input
-                    type="radio"
-                    name="attendance"
-                    value="yes"
-                    checked={attendance === 'yes'}
-                    onChange={() => setAttendance('yes')}
-                  />
-                  Yes
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="attendance"
-                    value="no"
-                    checked={attendance === 'no'}
-                    onChange={() => setAttendance('no')}
-                  />
-                  No
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="attendance"
-                    value="maybe"
-                    checked={attendance === 'maybe'}
-                    onChange={() => setAttendance('maybe')}
-                  />
-                  Maybe
-                </label>
-              </div>
-            </div>
-
-            <button type="submit" style={styles.submitButton}>Submit</button>
-          </form>
-          </div>
-
+<Form eventName="Vancouver Career Fair" />
       </div>
     </div>
   );
@@ -119,68 +58,5 @@ const styles = {
   },
   paragraph:{
     marginTop: '1rem'
-  },
-  formContainer: {
-    border: '2px solid #2E1A64', // Purple border
-    borderRadius: '12px',
-    padding: '20px',
-    maxWidth: '500px',
-    margin: '0',
-    boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)', // Soft shadow
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '15px',
-  },
-  inputGroup: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    gap: '10px',
-  },
-  fullWidth: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  checkboxGroup: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '5px',
-  },
-  submitButton: {
-    backgroundColor: '#2E1A64', // Dark Purple
-    color: 'white',
-    border: 'none',
-    padding: '10px',
-    borderRadius: '25px',
-    fontSize: '16px',
-    cursor: 'pointer',
-    marginTop: '10px',
-    transition: '0.3s ease',
-  },
-  textBox: {
-border: '1px solid gray',
-padding: '5px',
-borderRadius: '5px'
-  },
-  radioGroup: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '5px'
-  },
-  backButton: {
-    backgroundColor: 'transparent',
-    border: 'none',
-    fontSize: '16px',
-    cursor: 'pointer',
-    marginBottom: '10px',
-    marginTop: '10px'
-  },
-subHead: {
-    marginTop: '2rem',
-    marginBottom: '1rem',
-    fontSize: '30px',
-    fontWeight: 'bold'
-
-}
+  }
 };

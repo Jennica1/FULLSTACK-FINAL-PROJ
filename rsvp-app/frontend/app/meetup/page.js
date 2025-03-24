@@ -2,6 +2,7 @@
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import Navbar from '../components/Navbar'; // Import the Navbar
+import Form from '../components/Form';
 
 export default function EventPage() {
   const router = useRouter();
@@ -33,65 +34,7 @@ export default function EventPage() {
         to build meaningful connections within the tech startup community.
         </p>
 
-        {/* RSVP Section */}
-        <h2 style={styles.subHead}>RSVP</h2>
-        <div style={styles.formContainer}>
-          <form style={styles.form}>
-            <div style={styles.inputGroup}>
-              <div>
-                <label>First Name</label>
-                <input style={styles.textBox} type="text" placeholder="John" required />
-              </div>
-              <div>
-                <label>Last Name</label>
-                <input style={styles.textBox} type="text" placeholder="Doe" required />
-              </div>
-            </div>
-
-            <div style={styles.fullWidth}>
-              <label>Email Address</label>
-              <input style={styles.textBox} type="email" placeholder="johndoe@example.com" required />
-            </div>
-
-            <div style={styles.fullWidth}>
-            <label>Attending?</label>
-              <div style={styles.radioGroup}>
-                <label>
-                  <input
-                    type="radio"
-                    name="attendance"
-                    value="yes"
-                    checked={attendance === 'yes'}
-                    onChange={() => setAttendance('yes')}
-                  />
-                  Yes
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="attendance"
-                    value="no"
-                    checked={attendance === 'no'}
-                    onChange={() => setAttendance('no')}
-                  />
-                  No
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="attendance"
-                    value="maybe"
-                    checked={attendance === 'maybe'}
-                    onChange={() => setAttendance('maybe')}
-                  />
-                  Maybe
-                </label>
-              </div>
-            </div>
-
-            <button type="submit" style={styles.submitButton}>Submit</button>
-          </form>
-          </div>
+        <Form eventName="Vancouver Tech Startup Meeting" />
 
       </div>
     </div>

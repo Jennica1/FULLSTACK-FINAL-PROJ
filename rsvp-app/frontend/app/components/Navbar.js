@@ -13,7 +13,7 @@ export default function Navbar() {
         {/* Navigation Links (Can add more later) */}
         <div style={styles.navLinks}>
           <Link href="/" style={styles.link}>Home</Link>
-          <Link href="/event" style={styles.link}>Events</Link>
+          <Link href="/rsvps" style={styles.link}>RSVPs</Link> 
         </div>
       </div>
     </nav>

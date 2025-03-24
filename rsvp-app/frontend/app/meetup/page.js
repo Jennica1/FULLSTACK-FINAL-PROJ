@@ -1,16 +1,15 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
 import Navbar from '../components/Navbar'; // Import the Navbar
 import Form from '../components/Form';
 
 export default function EventPage() {
   const router = useRouter();
-  const [attendance, setAttendance] = useState(''); // Stores selected option
+
 
   return (
     <div>
-      <Navbar /> {/* ✅ Navbar at the top */}
+      <Navbar /> 
 
       {/* Banner Image */}
       <div style={styles.banner}>
@@ -64,54 +63,6 @@ const styles = {
   },
   paragraph:{
     marginTop: '1rem'
-  },
-  formContainer: {
-    border: '2px solid #2E1A64', // Purple border
-    borderRadius: '12px',
-    padding: '20px',
-    maxWidth: '500px',
-    margin: '0',
-    boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)', // Soft shadow
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '15px',
-  },
-  inputGroup: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    gap: '10px',
-  },
-  fullWidth: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  checkboxGroup: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '5px',
-  },
-  submitButton: {
-    backgroundColor: '#2E1A64', // Dark Purple
-    color: 'white',
-    border: 'none',
-    padding: '10px',
-    borderRadius: '25px',
-    fontSize: '16px',
-    cursor: 'pointer',
-    marginTop: '10px',
-    transition: '0.3s ease',
-  },
-  textBox: {
-border: '1px solid gray',
-padding: '5px',
-borderRadius: '5px'
-  },
-  radioGroup: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '5px'
   },
   backButton: {
     backgroundColor: 'transparent',

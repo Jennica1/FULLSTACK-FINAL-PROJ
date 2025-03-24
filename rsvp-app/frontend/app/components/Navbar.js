@@ -10,7 +10,6 @@ export default function Navbar() {
           <img src="/logo.svg" alt="EvenTrack Logo" style={styles.logo} />
         </Link>
 
-        {/* Navigation Links (Can add more later) */}
         <div style={styles.navLinks}>
           <Link href="/" style={styles.link}>Home</Link>
           <Link href="/rsvps" style={styles.link}>RSVPs</Link> 
@@ -20,7 +19,7 @@ export default function Navbar() {
   );
 }
 
-// CSS Styles
+// Styles
 const styles = {
   navbar: {
     backgroundColor: '#D9D5E5',
@@ -37,7 +36,7 @@ const styles = {
     alignItems: 'center',
     maxWidth: '1200px',
     margin: '0 auto',
-    padding: '0 150px', // 150px margin on the sides
+    padding: '0 150px', 
   },
   logo: {
     height: '50px',

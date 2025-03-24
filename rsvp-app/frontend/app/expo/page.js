@@ -1,36 +1,34 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
-import Navbar from '../components/Navbar'; 
+import Navbar from '../components/Navbar';
 import Form from '../components/Form';
 
 export default function EventPage() {
   const router = useRouter();
-  const [attendance, setAttendance] = useState(''); // Stores selected option
 
   return (
     <div>
-      <Navbar /> {/* ✅ Navbar at the top */}
+      <Navbar />
 
-      {/* Banner Image */}
+      {/* Banner */}
       <div style={styles.banner}>
         <img src="/techconvent.jpg" alt="Event Banner" style={styles.bannerImage} />
       </div>
 
       <div style={styles.container}>
-          {/* Back Button */}
-          <button style={styles.backButton} onClick={() => router.push('/')}>⬅ Back to Home</button>
+        {/* Back Button */}
+        <button style={styles.backButton} onClick={() => router.push('/')}>⬅ Back to Home</button>
         <h1 style={styles.header}>Vancouver Tech Exposition</h1>
 
         <p><strong>Date:</strong> April 10th, 2025</p>
         <p><strong>Time:</strong> 10am - 4pm</p>
         <p><strong>Location:</strong> Vancouver Convention Center </p>
         <p style={styles.paragraph}>
-        The Vancouver Tech Expo is a leading event that brings together innovators, tech enthusiasts, 
-        and industry leaders. Whether you're a student, recent graduate, or seasoned professional, this 
-        exposition offers a chance to explore cutting-edge technologies, gain insights from experts, 
-        and build meaningful connections within the tech community. Hosted at the Vancouver Convention Centre, 
-        it’s the ideal place to stay ahead in the ever-evolving world of technology.
+          The Vancouver Tech Expo is a leading event that brings together innovators, tech enthusiasts,
+          and industry leaders. Whether you're a student, recent graduate, or seasoned professional, this
+          exposition offers a chance to explore cutting-edge technologies, gain insights from experts,
+          and build meaningful connections within the tech community. Hosted at the Vancouver Convention Centre,
+          it’s the ideal place to stay ahead in the ever-evolving world of technology.
         </p>
 
         <Form eventName="Vancouver Tech Exposition" />
@@ -40,7 +38,7 @@ export default function EventPage() {
   );
 }
 
-// Styles for Banner and Layout
+// Styles 
 const styles = {
   banner: {
     width: '100%',
@@ -57,61 +55,14 @@ const styles = {
     margin: 'auto',
     padding: '20px',
   },
-  header:{
+  header: {
     fontSize: '50px',
     fontWeight: 'bold'
   },
-  paragraph:{
+  paragraph: {
     marginTop: '1rem'
   },
-  formContainer: {
-    border: '2px solid #2E1A64', // Purple border
-    borderRadius: '12px',
-    padding: '20px',
-    maxWidth: '500px',
-    margin: '0',
-    boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)', // Soft shadow
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '15px',
-  },
-  inputGroup: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    gap: '10px',
-  },
-  fullWidth: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  checkboxGroup: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '5px',
-  },
-  submitButton: {
-    backgroundColor: '#2E1A64', // Dark Purple
-    color: 'white',
-    border: 'none',
-    padding: '10px',
-    borderRadius: '25px',
-    fontSize: '16px',
-    cursor: 'pointer',
-    marginTop: '10px',
-    transition: '0.3s ease',
-  },
-  textBox: {
-border: '1px solid gray',
-padding: '5px',
-borderRadius: '5px'
-  },
-  radioGroup: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '5px'
-  },
+
   backButton: {
     backgroundColor: 'transparent',
     border: 'none',
@@ -120,11 +71,11 @@ borderRadius: '5px'
     marginBottom: '10px',
     marginTop: '10px'
   },
-subHead: {
+  subHead: {
     marginTop: '2rem',
     marginBottom: '1rem',
     fontSize: '30px',
     fontWeight: 'bold'
 
-}
+  }
 };

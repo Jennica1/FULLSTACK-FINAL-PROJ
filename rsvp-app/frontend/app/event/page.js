@@ -1,6 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import Navbar from '../components/Navbar'; // Import the Navbar
+import Navbar from '../components/Navbar';
 import Form from '../components/Form';
 
 export default function EventPage() {
@@ -8,34 +8,34 @@ export default function EventPage() {
 
   return (
     <div>
-      <Navbar /> {/* ✅ Navbar at the top */}
+      <Navbar />
 
-      {/* Banner Image */}
+      {/* Banner */}
       <div style={styles.banner}>
         <img src="/event-banner.png" alt="Event Banner" style={styles.bannerImage} />
       </div>
 
       <div style={styles.container}>
-          {/* Back Button */}
-          <button style={styles.backButton} onClick={() => router.push('/')}>⬅ Back to Home</button>
+        {/* Back Button */}
+        <button style={styles.backButton} onClick={() => router.push('/')}>⬅ Back to Home</button>
         <h1 style={styles.header}>Vancouver Career Fair</h1>
 
         <p><strong>Date:</strong> March 24th, 2025</p>
         <p><strong>Time:</strong> 5pm - 8pm</p>
         <p><strong>Location:</strong> JW Marriott Parq Hotel</p>
         <p style={styles.paragraph}>
-          The Vancouver Career Fair is a premier networking event connecting job seekers 
-          with top employers. Whether you’re a student, recent graduate, or professional 
-          looking for a career change, this fair provides an opportunity to discover job 
+          The Vancouver Career Fair is a premier networking event connecting job seekers
+          with top employers. Whether you’re a student, recent graduate, or professional
+          looking for a career change, this fair provides an opportunity to discover job
           openings, gain insights, and make valuable connections.
         </p>
-<Form eventName="Vancouver Career Fair" />
+        <Form eventName="Vancouver Career Fair" />
       </div>
     </div>
   );
 }
 
-// Styles for Banner and Layout
+// Styles 
 const styles = {
   banner: {
     width: '100%',
@@ -52,11 +52,11 @@ const styles = {
     margin: 'auto',
     padding: '20px',
   },
-  header:{
+  header: {
     fontSize: '50px',
     fontWeight: 'bold'
   },
-  paragraph:{
+  paragraph: {
     marginTop: '1rem'
   }
 };
